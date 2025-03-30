@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topico</title>
+    <link
+      rel="shortcut icon"
+      href="img/bag-shopping-solid.svg"
+      type="image/x-icon"
+    />
+    <!-- Links CSS Styling -->
+    <!-- Swiper link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Links JavaScript -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/items_home.js"></script>
+    <script defer src="js/swiper.js"></script>
+  </head>
+  <body>
+    <!-- Back top -->
+    <button id="arrow-up"><i class="fa-solid fa-arrow-up"></i></button>
+    <!-- header Start -->
+
+    <header>
+      <!-- top nav Start -->
+      <div class="container top-nav">
+        <a href="#" class="logo"><img src="img/logo-black.png" alt="logo" /></a>
+        <form action="" class="search">
+          <input type="search" placeholder="Search for Products..." />
+          <button type="submit">Search</button>
+        </form>
+
+        <div class="icon-header">
+          <!-- icon and count of products -->
+          <div class="icon-cart">
+            <i class="fa-solid fa-bag-shopping" id="open-cart"></i>
+            <span class="count-item">0</span>
+          </div>
+
+          <!-- Total price of products -->
+          <div class="total-price">
+            <p>My Cart:</p>
+            <p class="price-cart-head">$0</p>
+          </div>
+        </div>
+      </div>
+      <!-- top nav End -->
+
+      <nav>
+        <div class="links container">
+          <ul>
+            <li class="active"><a href="">home</a></li>
+            <li><a href="">all Product</a></li>
+            <li><a href="">about us</a></li>
+            <li><a href="">contact</a></li>
+          </ul>
+
+          <div class="login_signup">
+            <a href="#">login <i class="fa-solid fa-right-to-bracket"></i></a>
+            <a href="#">sign up <i class="fa-solid fa-user-plus"></i></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- header Start -->
+
+    <!-- cart Start -->
+
+    <div id="cart" class="cart">
+      <!-- top cart start -->
+      <div class="top-cart">
+        <h3>My cart <span class="count-item-cart">(0 Item in cart)</span></h3>
+        <span class="close-cart" id="close-cart"
+          ><i class="fa-regular fa-circle-xmark"></i
+        ></span>
+      </div>
+      <!-- top cart End -->
+
+      <!-- item in cart Start -->
+      <div class="item-in-cart"></div>
+      <!-- item in cart End -->
+
+      <!-- bottom cart Start -->
+      <div class="botton-cart">
+        <div class="total">
+          <p>cart subtotal</p>
+          <p class="price-cart-total">$0</p>
+        </div>
+
+        <!-- button cart Start-->
+        <div class="button-cart">
+          <a href="#" class="btn-cart">Product to checkout</a>
+          <button class="btn-cart trans-bg">Shop more</button>
+        </div>
+        <!-- button cart End-->
+      </div>
+      <!-- bottom cart End -->
+    </div>
+    <!-- cart End -->
+
+    <!-- item details Start -->
+    <div class="item-details">
+      <div class="container">
+        <div class="item-img">
+          <div class="big-img">
+            <img id="bigImg" src="img/product/product-1.jpg" alt="" />
+          </div>
+          <div class="sm-imgs">
+            <img onclick="changeImge(this.src)" src="img/product/product-1.jpg" alt="" />
+            <img onclick="changeImge(this.src)" src="img/product/product1.jpg" alt="" />
+            <img onclick="changeImge(this.src)" src="img/product/product-2.jpg" alt="" />
+            <img onclick="changeImge(this.src)" src="img/product/product2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="details-item">
+          <h1 class="name">Original Mobile Android Dual SIM Smart Phone G3</h1>
+          <div class="stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+
+          <div class="price">
+            <p><span>$120.0</span></p>
+            <p class="old-price">$170.0</p>
+          </div>
+
+          <h5>Availability: <span>In Stock</span></h5>
+          <h5>SKU: <span>Samsung c49J89: 875, Debenhams Plus</span></h5>
+          <p class="text-p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            excepturi molestiae id veniam error aspernatur nihil nisi possimus
+            ullam ducimus distinctio ratione harum incidunt neque, sit nulla
+            blanditiis. Deserunt, nobis suscipit ea distinctio enim quia
+            reprehenderit similique quidem quibusdam repellendus explicabo
+            delectus ad deleniti recusandae assumenda odio. Eveniet, autem est.
+          </p>
+          <h4>Hurry Up! Only 98 Products left in Stock.</h4>
+          <button>add to cart <i class="fa-solid fa-cart-arrow-down"></i></button>
+
+          <div class="icons">
+            <span><i class="fa-regular fa-heart"></i></span>
+            <span><i class="fa-solid fa-sliders"></i></span>
+            <span><i class="fa-solid fa-print"></i></span>
+            <span><i class="fa-solid fa-share-nodes"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- item details Start -->
+
+    <!-- Slide Start -->
+    <section class="slide slide-sale">
+      <div class="container">
+        <div class="slide-sec mySwiper">
+          <div class="top-slide">
+            <h2>on Sale<span> Product</span></h2>
+          </div>
+          <!-- Product Start -->
+          <div id="swiper_items_sale" class="products swiper-wrapper"></div>
+          <!-- Product End -->
+
+          <div class="swiper-button-next btn-swip"></div>
+          <div class="swiper-button-prev btn-swip"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide End -->
+
+    <!-- back to top Start -->
+    <div class="back-to-top">
+      <p>back to top</p>
+    </div>
+    <!-- back to top Start -->
+
+    <!-- footer Start -->
+
+    <footer>
+      <div class="container">
+        <div class="big-row">
+          <img src="img/logo-white.png" alt="" />
+
+          <div class="hotline">
+            <i class="fa-solid fa-headset"></i>
+            <div class="text">
+              <h5>Hotline Free 24/24:</h5>
+              <h6>(+20)123 456 7890</h6>
+            </div>
+          </div>
+
+          <p>
+            You Can Shop From This site anytime, And You Will Find All You Need
+          </p>
+        </div>
+
+        <div class="row">
+          <h4>FAQs & Help</h4>
+          <div class="links">
+            <a href="#">F.A.Q.'s</a>
+            <a href="#">Ordering Tracking</a>
+            <a href="#">Contacts</a>
+            <a href="#">Events</a>
+            <a href="#">Help Center</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h4>Shipping & Delivery</h4>
+          <div class="links">
+            <a href="#">Delivery Information</a>
+            <a href="#">Discount</a>
+            <a href="#">Payment Shipping</a>
+            <a href="#">Estimated Delivery Time</a>
+            <a href="#">Shipping Guide</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h4>Information</h4>
+          <div class="links">
+            <a href="#">Popular</a>
+            <a href="#">Our Services</a>
+            <a href="#">Your Account</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Condition</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- bottom footer -->
+
+      <div class="bottom-footer">
+        <div class="container">
+          <p>Copyright &copy; <span>Topico.</span>all rights reserved</p>
+          <div class="pyment-img">
+            <img src="img/payment-1.png" alt="" />
+            <img src="img/payment-2.png" alt="" />
+            <img src="img/payment-3.png" alt="" />
+            <img src="img/payment-4.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- footer End -->
+  </body>
+</html>
