@@ -1,4 +1,4 @@
-const Username = document.getElementById("name");
+const Username = document.getElementById("Username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const ConfirmPassword = document.getElementById("ConfirmPassword");
@@ -27,6 +27,8 @@ const activeReg = () => {
 
 // check User Name Input
 Username.addEventListener("keyup", (eo) => {
+  userMessage.style.display = "block";
+    Username.classList.add("activeInput");
   if (Username.value.length < 3) {
     userMessage.style.display = "block";
     Username.classList.add("activeInput");

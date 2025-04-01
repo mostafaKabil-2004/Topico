@@ -1,27 +1,27 @@
-const Username = document.getElementById("name");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
-const ConfirmPassword = document.getElementById("ConfirmPassword");
-const userMessage = document.querySelector(".userMessage");
 const emailMessage = document.querySelector(".emailMessage");
 const passwordMessage = document.querySelector(".passwordMessage");
-const confirmPasswordMessage = document.querySelector(
-  ".confirmPasswordMessage"
-);
+
 const formBtn = document.querySelector(".form-btn");
 
 // check if all input are correct to undisabled the register input
 
 const activeReg = () => {
-  if (
-    !email.classList.contains("activeInput") &&
-    !password.classList.contains("activeInput")
-  ) {
+  if (  !email.classList.contains("activeInput") &&
+  !password.classList.contains("activeInput")){
+
     formBtn.removeAttribute("disabled"); // تفعيل الزر
-  } else {
+  }
+    
+ else {
     formBtn.setAttribute("disabled", ""); // تعطيل الزر
   }
 };
+
+
+
+
 
 // check Email Input
 
@@ -37,7 +37,7 @@ email.addEventListener("keyup", (eo) => {
     email.classList.add("activeInput");
   }
 
-  activeReg();
+  activeReg()
 });
 
 // check password input
@@ -54,7 +54,11 @@ password.addEventListener("keyup", (eo) => {
     password.classList.add("activeInput");
   }
 
-  activeReg();
+  activeReg()
 });
+
+
+
+
 
 // aaaaaA1#

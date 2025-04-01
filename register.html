@@ -1,70 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register Page</title>
-    <link
-      rel="shortcut icon"
-      href="img/bag-shopping-solid.svg"
-      type="image/x-icon"
-    />
-    <!-- Links CSS Styling -->
-    <!-- Swiper link -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/login_register.css" />
-    <!-- Links JavaScript -->
-    <!-- Swiper JS -->
-    <script defer src="js/main.js"></script>
-    <script defer src="js/register.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topoco</title>
 
-  </head>
-  <body>
+    <!-- File CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
+    <link rel="stylesheet" href="css/login_register.css">
 
-    <section class="signup sec-form">
-      <div class="form-container">
-        <p class="title">Register</p>
-        <form action="index.html" class="form">
-          <input id="name" type="text" placeholder="User Name">
-          <p class="userMessage">at least 3 character</p>
-          <input id="email" type="Email" placeholder="Email">
-          <p class="emailMessage">Please enter a correct email address</p>
-          <input id="password" type="password" placeholder="password">
-          <p class="passwordMessage">Password must be at least 8 character & 1 upper & 1 number</p>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- js link -->
+     <script defer src="js/register.js"></script>
+</head>
+<body>
 
-          <input id="ConfirmPassword" type="password" placeholder="Confirm password">
-          <p class="confirmPasswordMessage">Please make sure your password match
+    <header>
+        <div class="container top-nav">
+            <a href="index.html" class="logo"><img src="img/logo-black.png" alt=""></a>
+            <form action="" class="search">
+                <input type="search" placeholder="Search for products...">
+                <button type="submit">Search</button>
+            </form>
 
-          </p>
-
-        <button disabled class="form-btn">Register</button>
-        </form>
-
-        <p class="sign-up-label">
-          I have Already an account? <a href="login.html" class="sign-up-link">Login</a>
-        </p>
-
-        <div class="buttons-container">
-          <div class="apple-login-button">
-            <i class="fa-brands fa-apple"></i>
-            <span>login with Apple</span>
-          </div>
-          <div class="google-login-button">
-            <i class="fa-brands fa-google"></i>
-            <span>login with Google</span>
-          </div>
+            <div class="cart_header">
+                <div onclick="open_cart()" class="icon_cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="count_item">0</span>
+                </div>
+                <div class="tottal_price">
+                    <p>My Cart:</p>
+                    <p class="price_cart_Head">$0</p>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <nav>
+            <div class="links container">
+                <i onclick="open_menu()" class="fa-solid fa-bars btn_open_menu"></i>
+                <ul id="menu">
+                    <span onclick="close_menu()" class="bg-overlay"></span>
+                    <i onclick="close_menu()" class="fa-regular fa-circle-xmark btn_close_menu"></i>
+                    <img class="logo_menu" src="img/logo-black.png" alt="">
+                    
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="all_products.html">all products</a></li>
+                    <li><a href="item.html">Items</a></li>
+                    <li><a href="">contact</a></li>
+                </ul>
+
+                <div class="loging_signup">
+                    <a href="login.html">login <i class="fa-solid fa-right-to-bracket"></i></a>
+          
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="cart ">
+        <div class="top_cart">
+            <h3>My cart <span class="count_item_cart">(0Item in Cart)</span></h3>
+            <span onclick="close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+
+        <div class="items_in_cart">
+           
+        
+            
+        </div>
+
+        <div class="bottom_Cart">
+            <div class="total">
+                <p>Cart subtotal</p>
+                <p class="price_cart_total">$0</p>
+            </div>
+
+            <div class="button_Cart">
+                <a href="checkout.html" class="btn_cart">Proceed to checkout</a>
+                <button onclick="close_cart()" class="btn_cart trans_bg">Shop more</button>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="signin sec_form">
+        <div class="form_container">
+            <p class="title">Register</p>
+
+            <form action="index.html" class="form">
+
+                <input id="Username" type="text" placeholder="Name">
+                <p class="userMessage">at least 3 character</p>
+                <input id="email" type="email" placeholder="Email">
+                <p class="emailMessage">Please enter a correct email address</p>
+                <input id="password" type="password" placeholder="password">
+                <p class="passwordMessage">Password must be at least 8 character & 1 upper & 1 number</p>
+                <input id="ConfirmPassword" type="password" placeholder="Confirm Password">
+                <p class="confirmPasswordMessage">Please make sure your password match</p>
+                <button disabled class="form-btn">sign up</button>
+                
+            </form>
+
+            <p class="sign-up-label">
+                have an account? <a href="login.html" class="sign-up-link">Login</a>
+            </p>
+
+
+            <div class="buttons-container">
+                <div class="apple-login-buuton">
+                    <i class="fa-brands fa-apple"></i>
+                    <span>Sign UP with Apple</span>
+                </div>
+
+                <div class="google-login-button">
+                    <i class="fa-brands fa-google"></i>
+                    <span>Sign UP with Google</span>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
     </section>
-  
 
 
+    
 
 
-  </body>
+    <footer>
+        <div class="container">
+            <div class="big_row">
+                <img src="img/logo-white.png" alt="">
+                <div class="hotline">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="text">
+                        <h5>Hotline Free 24/24:</h5>
+                        <h6>(+100) 123 456 7890</h6>
+                    </div>
+                </div>
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit consectetur.</p>
+            </div>
+
+            <div class="row">
+                <h4>FAQs & Help</h4>
+
+                <div class="links">
+                    <a href="#">F.A.Q.’s</a>
+                    <a href="#">Ordering Tracking</a>
+                    <a href="#">Contacts</a>
+                    <a href="#">Events</a>
+                    <a href="#">Help Center</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Shipping & Delivery</h4>
+
+                <div class="links">
+                    <a href="#">Delivery Information</a>
+                    <a href="#">Discount</a>
+                    <a href="#">Payment & Shipping</a>
+                    <a href="#">Estimated Delivery Time</a>
+                    <a href="#">Shipping Guide</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Information</h4>
+
+                <div class="links">
+                    <a href="#">Popular</a>
+                    <a href="#">Our Services</a>
+                    <a href="#">Your Account</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Condition</a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container">
+                <p>Copyright &copy; <span>Topico.</span> all rights reserved</p>
+
+                <div class="payment_img">
+                    <img src="img/payment-1.png" alt="">
+                    <img src="img/payment-2.png" alt="">
+                    <img src="img/payment-3.png" alt="">
+                    <img src="img/payment-4.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    
+
+    <script src="js/main.js"></script>
+
+</body>
 </html>
