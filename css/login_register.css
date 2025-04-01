@@ -21,10 +21,7 @@
   align-items: center;
 }
 
-.form-btn:disabled {
-  opacity: 0.8;
-  cursor: not-allowed;
-}
+
 
 .sec-form .form-container {
   background-color: #fff;
@@ -113,7 +110,10 @@
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
-
+.form-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 .sign-up-label {
   margin: 0;
   font-size: 14px;
