@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
 }
 
 :root {
@@ -20,7 +21,10 @@
   align-items: center;
 }
 
-
+.form-btn:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
 
 .sec-form .form-container {
   background-color: #fff;
@@ -66,8 +70,20 @@
   transition: all 0.5s;
 }
 
+.userMessage,
+.emailMessage,
+.passwordMessage,
+.confirmPasswordMessage {
+  color: var(--dark-red);
+  display: none;
+}
+
 .form input:focus {
   border: 1px solid var(--main-color);
+}
+
+.activeInput {
+  border: 2px solid var(--dark-red) !important;
 }
 
 .page-link {
@@ -147,4 +163,28 @@
 .google-login-button {
   border: 1px solid #5c5c5c;
   color: var(--dark-color);
+}
+
+/* register Page */
+.signup.sec-form {
+  margin-block: 70px;
+}
+.signup.sec-form .form-container {
+  width: 500px;
+}
+
+@media (max-width: 500px) {
+  .signup.sec-form .form-container {
+    width: 450px;
+  }
+}
+@media (max-width: 450px) {
+  .signup.sec-form .form-container {
+    width: 400px;
+  }
+}
+@media (max-width: 400px) {
+  .signup.sec-form .form-container {
+    width: 350px;
+  }
 }

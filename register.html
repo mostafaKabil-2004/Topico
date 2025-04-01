@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Topico</title>
+    <title>Register Page</title>
     <link
       rel="shortcut icon"
       href="img/bag-shopping-solid.svg"
@@ -20,31 +20,33 @@
     <!-- Links JavaScript -->
     <!-- Swiper JS -->
     <script defer src="js/main.js"></script>
-    <script defer src="js/login.js"></script>
+    <script defer src="js/register.js"></script>
 
   </head>
   <body>
 
 
-    <section class="signin sec-form">
+    <section class="signup sec-form">
       <div class="form-container">
-        <p class="title">Welcome Back</p>
+        <p class="title">Register</p>
         <form action="index.html" class="form">
+          <input id="name" type="text" placeholder="User Name">
+          <p class="userMessage">at least 3 character</p>
           <input id="email" type="Email" placeholder="Email">
           <p class="emailMessage">Please enter a correct email address</p>
-
           <input id="password" type="password" placeholder="password">
           <p class="passwordMessage">Password must be at least 8 character & 1 upper & 1 number</p>
 
-          <p class="page-link">
-            <a href="#" class="page-link-lable">Forget Password?</a>
-        </p>
+          <input id="ConfirmPassword" type="password" placeholder="Confirm password">
+          <p class="confirmPasswordMessage">Please make sure your password match
 
-        <button disabled class="form-btn">Login</button>
+          </p>
+
+        <button disabled class="form-btn">Register</button>
         </form>
 
         <p class="sign-up-label">
-          Don't have an account? <a href="register.html" class="sign-up-link">Sign Up</a>
+          I have Already an account? <a href="login.html" class="sign-up-link">Login</a>
         </p>
 
         <div class="buttons-container">
